@@ -39,13 +39,13 @@ EOF'
 sudo a2ensite sif-v2.ourbetterworld.org.conf
 
 # Install Certbot
-sudo apt-get install -y certbot python3-certbot-apache
+#sudo apt-get install -y certbot python3-certbot-apache
 
 # Obtain SSL certificate
-sudo certbot --apache -d sif-v2.ourbetterworld.org
+#sudo certbot --apache -d sif-v2.ourbetterworld.org
 
 # Set up a cron job for automatic certificate renewal
-sudo bash -c 'echo "0 0,12 * * * root certbot renew --quiet --post-hook \"systemctl reload apache2\"" > /etc/cron.d/certbot-renew'
+#sudo bash -c 'echo "0 0,12 * * * root certbot renew --quiet --post-hook \"systemctl reload apache2\"" > /etc/cron.d/certbot-renew'
 
 # Install Git
 sudo apt-get install -y git
